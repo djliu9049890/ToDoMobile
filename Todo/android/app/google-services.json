@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "351043703474",
+    "project_id": "todomobile-f195d",
+    "storage_bucket": "todomobile-f195d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351043703474:android:acaea4e1f5bf65d21aafab",
+        "android_client_info": {
+          "package_name": "com.todo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQ3T8p2zxsuXrN-A7GnawFtFJiZ54Dt_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
