@@ -63,6 +63,21 @@ function App(): React.JSX.Element {
   }
   console.log(list)
 
+  const onDeletePress = async (itemTitle: string) => {
+    // Find the document with the matching title
+    const querySnapshot = await ref.where('title', '==', itemTitle).get();
+
+    if (querySnapshot.empty) {
+      // Handle the case where no matching document is found
+      console.log(`No document with title ${itemTitle} found.`);
+      return;
+    }
+
+    // Delete the first matching document (assuming titles are unique)
+    const docToDelete = querySnapshot.docs[0];
+    await docToDelete.ref.delete();
+  };
+
   return (
     <View style = {style.mainContainer}>
       <View style = {{flexDirection: 'row'}}> 
@@ -86,6 +101,12 @@ function App(): React.JSX.Element {
           <View style = {style.card}>
             <Text style = {{color: 'white'}}>{item.title}</Text>
             <Text style = {{color: 'white'}}>{item.complete? 'complete': 'not complete'}</Text>
+            <TouchableOpacity
+              onPress={() => onDeletePress(item.title)}
+              style={{ backgroundColor: 'red', padding: 5, borderRadius: 5 }}
+            >
+              <Text style={{ color: 'white' }}>Delete</Text>
+            </TouchableOpacity>
           </View>
         )}
       />
