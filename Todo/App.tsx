@@ -7,6 +7,7 @@
 
 import React, { useEffect, useState } from 'react';
 import firestore from '@react-native-firebase/firestore';
+import notifee, { AndroidImportance } from '@notifee/react-native';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -34,6 +35,31 @@ function App(): React.JSX.Element {
   const ref = firestore().collection('todos');
   const [list, setList] = useState<ListItem[]>([]);
 
+  async function onDisplayNotification(title: string) {
+    // Request permissions (required for iOS)
+    await notifee.requestPermission()
+
+    // Create a channel (required for Android)
+    const channelId = await notifee.createChannel({
+      id: 'default',
+      name: 'Default Channel',
+    });
+
+    // Display a notification
+    await notifee.displayNotification({
+      body: "Complete your " + title + "!",
+      android: {
+        channelId,
+        importance: AndroidImportance.HIGH, // Set priority to high for heads-up notification
+        //smallIcon: 'name-of-a-small-icon', // optional, defaults to 'ic_launcher'.
+        // pressAction is needed if you want the notification to open the app when pressed
+        pressAction: {
+          id: 'default',
+        },
+      },
+    });
+  }
+
   useEffect(()=>{
     return ref.onSnapshot(querySnapshot => {
       const list: ListItem[] = [];
@@ -60,6 +86,7 @@ function App(): React.JSX.Element {
     })
     console.log(text)
     setText('')
+    onDisplayNotification(text)
   }
   console.log(list)
 
