@@ -111,6 +111,7 @@ function App(): React.JSX.Element {
         <TextInput
         value = {text}
         onChangeText = {setText}
+        placeholder = "Type Todo here!"
         style = {style.textInput}
         />
         
