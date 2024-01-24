@@ -20,6 +20,7 @@ npm start
 # OR using Yarn
 yarn start
 ```
+Run this command in both the ToDoMobile folder and Todo folder if you are missing metro-config package when running npm start: ```npm i metro-config --save-dev```
 
 ## Step 2: Start your Application
 
