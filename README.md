@@ -3,7 +3,7 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding. Additionally, make sure you have installed Android Studio for the android emulator following this tutorial [(https://youtu.be/xKGESzemfdw)]. Here is the main page where you can download [android studio](https://developer.android.com/studio?acs_info=ZmluYWxfdXJsOiAiaHR0cHM6Ly9kZXZlbG9wZXIuYW5kcm9pZC5jb20vc3R1ZGlvIgo&gclid=CjwKCAiA5L2tBhBTEiwAdSxJX7Dxgz0L3GqF7SSrYHWNvwXQFFW1NbtjNy_h2ZDvmCnUT6uvEQvrNRoCGhQQAvD_BwE&gclsrc=aw.ds).
+>**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding. Additionally, make sure you have installed Android Studio for the android emulator following this tutorial [(https://youtu.be/xKGESzemfdw)]. Make sure to choose the Google Pixel 7 Pro emulator. Here is the main page where you can download [android studio](https://developer.android.com/studio?acs_info=ZmluYWxfdXJsOiAiaHR0cHM6Ly9kZXZlbG9wZXIuYW5kcm9pZC5jb20vc3R1ZGlvIgo&gclid=CjwKCAiA5L2tBhBTEiwAdSxJX7Dxgz0L3GqF7SSrYHWNvwXQFFW1NbtjNy_h2ZDvmCnUT6uvEQvrNRoCGhQQAvD_BwE&gclsrc=aw.ds).
 >
 >Dont forget to source ~/.bash_profile if you modified Java SDK environment and Android SDK in there before continuing
 
